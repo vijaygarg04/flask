@@ -1,23 +1,25 @@
 {% extends "layout.html" %}
 {% block content %}
+<div class="container">
 <form action="/" method="POST">
         <div class="form-group">
           <label for="empid">Person Id</label>
-          <input type="text" class="form-control" id="empid" name="empid"  placeholder="Enter emp Id">
+          <input type="text" class="form-control" id="empid" name="empid"  placeholder="Enter emp Id" required>
         </div>
         <div class="form-group">
           <label for="fname">First Name</label>
-          <input type="text" class="form-control" id="fname" name="fname"  placeholder="First Name">
+          <input type="text" class="form-control" id="fname" name="fname"  placeholder="First Name" required>
         </div>
         <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" class="form-control" id="lname" name="lname"  placeholder="Last Name">
+                <input type="text" class="form-control" id="lname" name="lname"  placeholder="Last Name" required>
          </div>
          <div class="form-group">
                 <label for="tech">Technology Assigned</label>
-                <input type="text" class="form-control" id="tech"name="tech"  placeholder="Technology Assigned">
+                <input type="text" class="form-control" id="tech"name="tech" required placeholder="Technology Assigned">
          </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+  </div>
 {% endblock content %}

@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <style>
+        table{
+    border-collapse: collapse ;
+    width: 100%;
+}
+th , td {
+    text-align: center;
+    padding: 8px
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2
+    
+}
+</style>
     {% if title %}
     <title>{{title}}</title>
     {% else %}
@@ -16,7 +29,8 @@
     {% block content %}
     {% endblock %}
     {% if posts and posts|length > 0 %}
-    <table style="width:100%">
+    <div style="margin: 40px">
+    <table style="width:100%; overflow-x:auto;">
         <thead>
         <tr>
           <th>Person Id</th>
@@ -41,8 +55,7 @@
         {% endfor %}
     </tbody>
        </table> 
-    {% else %}
-    <h4>No Data To Display</h4>
+    </div>
     {% endif %} 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,23 +1,25 @@
 {% extends "layout.html" %}
 {% block content %}
+<div class="container">
 <form action="/update/{{updatepost.empid}}" method="POST">
         <div class="form-group">
           <label for="empid">Person Id</label>
-          <input type="text" class="form-control" id="empid" name="empid" value = "{{ updatepost.empid }}" placeholder="Enter emp Id">
+          <input type="text" class="form-control" readonly id="empid" name="empid" value = "{{ updatepost.empid }}" placeholder="Enter emp Id">
         </div>
         <div class="form-group">
           <label for="fname">First Name</label>
-          <input type="text" class="form-control" id="fname" name="fname" value = "{{ updatepost.fname }}" placeholder="First Name">
+          <input type="text" class="form-control" required id="fname" name="fname" value = "{{ updatepost.fname }}" placeholder="First Name">
         </div>
         <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" class="form-control" id="lname" name="lname" value = "{{ updatepost.lname }}" placeholder="Last Name">
+                <input type="text" class="form-control" required id="lname" name="lname" value = "{{ updatepost.lname }}" placeholder="Last Name">
          </div>
          <div class="form-group">
                 <label for="tech">Technology Assigned</label>
-                <input type="text" class="form-control" id="tech"name="tech" value = "{{ updatepost.tech }}" placeholder="Technology Assigned">
+                <input type="text" class="form-control" required id="tech"name="tech" value = "{{ updatepost.tech }}" placeholder="Technology Assigned">
          </div>
         
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
+    </div>
 {% endblock content %}

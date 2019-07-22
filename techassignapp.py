@@ -97,7 +97,6 @@ def update(emp_id):
                         updatepost['lname']=row[2]
                         updatepost['tech']=row[3]
                 cursor.close()
-                print(post)
                 return render_template('updateform.html', posts=posts,updatepost=updatepost)
 
 @app.route('/delete/<string:emp_id>', methods=['GET', 'POST'])
